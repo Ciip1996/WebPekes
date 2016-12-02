@@ -1,0 +1,13 @@
+C:\Users\Iván\Documents\LibreriaWebPekes\LibreriaWebPekes\bin\Debug\LibreriaWebPekes.dll
+C:\Users\Iván\Documents\LibreriaWebPekes\LibreriaWebPekes\bin\Debug\LibreriaWebPekes.pdb
+C:\Users\Iván\Documents\LibreriaWebPekes\LibreriaWebPekes\obj\Debug\LibreriaWebPekes.csprojResolveAssemblyReference.cache
+C:\Users\Iván\Documents\LibreriaWebPekes\LibreriaWebPekes\obj\Debug\LibreriaWebPekes.dll
+C:\Users\Iván\Documents\LibreriaWebPekes\LibreriaWebPekes\obj\Debug\LibreriaWebPekes.pdb
+C:\Users\Iván\Desktop\Integrador3.0\LibreriaWebPekes\LibreriaWebPekes\obj\Debug\LibreriaWebPekes.dll
+C:\Users\Iván\Desktop\Integrador3.0\LibreriaWebPekes\LibreriaWebPekes\obj\Debug\LibreriaWebPekes.pdb
+C:\Users\Iván\Desktop\Integrador3.0\LibreriaWebPekes\LibreriaWebPekes\bin\Debug\LibreriaWebPekes.dll
+C:\Users\Iván\Desktop\Integrador3.0\LibreriaWebPekes\LibreriaWebPekes\bin\Debug\LibreriaWebPekes.pdb
+C:\inetpub\wwwPekes\Integrador3.0\LibreriaWebPekes\LibreriaWebPekes\bin\Debug\LibreriaWebPekes.dll
+C:\inetpub\wwwPekes\Integrador3.0\LibreriaWebPekes\LibreriaWebPekes\bin\Debug\LibreriaWebPekes.pdb
+C:\inetpub\wwwPekes\Integrador3.0\LibreriaWebPekes\LibreriaWebPekes\obj\Debug\LibreriaWebPekes.dll
+C:\inetpub\wwwPekes\Integrador3.0\LibreriaWebPekes\LibreriaWebPekes\obj\Debug\LibreriaWebPekes.pdb

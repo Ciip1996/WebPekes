@@ -1,0 +1,408 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+
+    height: 100%;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    font-family: Grande, Tahoma, Verdana, Arial, sans-serif !important;
+}
+
+body {
+    padding-top: 75px;
+   
+}
+
+/* -CLASES- */
+.carousel-control {
+    /*GALERIA DEL INDEX*/
+    font-size: 35px !important;
+    color: #0a5258 !important;
+    width: 30% !important;
+    opacity: .2 !important;
+    background: none !important;
+}
+/*Camiar .tooltip-inner y tooltip-arrow para interfaz*/
+.tooltip-inner {
+    max-width: 200px;
+    padding: 3px 8px;
+    color: #fff;
+    text-align: center;
+    background-color: #000;
+    border-radius: 4px;
+}
+
+.tooltip-arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+}
+
+.linkPedidos {
+    display: none;
+}
+
+.input-login {
+    margin: 10px 0px;
+}
+
+.btn-pekes { /*Estandar de botones pekes*/
+    background-color: #e8507c;
+    color: white;
+}
+
+    .btn-pekes:hover, .btn-pekes:focus {
+        background-color: white;
+        border-color: #e8507c;
+        color: #e8507c;
+    }
+
+.footer {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    background-color: #58B9C9 /*#58B9C9 #0A5258; #0D6D75*/;
+    color: #ffffff;
+    text-align: center;
+    min-height: 50px;
+    z-index: 100;
+    margin-top: 0px; /* negative value of footer height */
+    clear: both;
+    height:20%;
+    max-height:800px;
+}
+
+.navbar-pekes {
+    opacity: 0.9;
+    background-color:#cfebf5 /*#e0f3fc*/;
+    /*cfebf5;*/
+    border-color: #74ccbc;
+    border-width: 1px;
+    border:thin;
+    color: #e8507c !important;
+    z-index: 10000;
+}
+
+.nav > li > a:hover, .nav > li > a:focus, .nav > li > a::selection,.nav > li > a:checked {
+    background-color: #74ccbc;
+    color: #e0f3fc;
+}
+
+.nav > li > a {
+    text-align: center !important;
+    font-family: MyriadPro-Regular, Tahoma !important;
+    font-size: medium;
+}
+
+.navbar-brand {
+    padding: 0px 12px 0px 12px !important;
+    height: 100% !important;
+    width: auto;
+}
+
+.dropdown-menu {
+    min-width: 280px;
+    width: 90%;
+    max-width: 400px;
+    right: 15px;
+    left: auto;
+    top: 85px;
+    border-radius: 14px !important;
+}
+
+.panel {
+    margin-bottom: 0px !important;
+}
+
+.logoCabecera {
+    height: 70px !important;
+    max-width: 80px;
+    padding-left: 40px !important;
+    padding-top: 10px;
+}
+
+
+
+.logoFooter {
+    width: 80%;
+    max-width: 100px;
+    height: auto;
+    position: center;
+    vertical-align: central !important;
+    padding: 5px 0px;
+}
+
+a.list-group-item:hover, .btn-filtro:hover, .btn-filtro:focus, button.list-group-item:hover, a.list-group-item:focus, button.list-group-item:focus {
+    color: #e8507c;
+}
+
+.list-group-item:focus, .btn-filtro:focus {
+    outline: 0;
+    outline-color: #e8507c !important;
+}
+
+.list-group {
+    margin-top: 30px !important;
+    min-width: 150px !important;
+}
+
+.menuColapsado {
+    padding: 5px 15%;
+}
+
+.botonSocial {
+    max-width: 160px !important;
+    min-width: 100px !important;
+    margin: 5px;
+}
+.form-contacto{
+    margin:70px 0px 0px 5% !important;
+    max-width:600px;
+}
+.form-contacto > .form-group > div > div{
+    margin-bottom:15px;
+    width: 100%;
+}
+.form-control{
+    min-width:150px;
+    max-width:500px;
+
+}
+.menuLogin {
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, .3);
+}
+
+.menuLoginFooter {
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.sliderIndex > .item > img, .sliderIndex > .item > a > img {
+    /*width: 100%; Se comento porque ocaciona deformacion en la imagen*/
+    max-height: 100% !important;
+    width: auto !important;
+    margin: auto !important;
+}
+
+.imagenSlider { /*Las imagenes*/
+    background-position: center !important;
+    background-image: none;
+    position: center;
+    height: 500px !important;
+    width: auto !important;
+    vertical-align: middle !important;
+    border: 0 !important;
+    -ms-interpolation-mode: bicubic !important;
+}
+
+.btn-filtro {
+}
+
+.col-xs-3 {
+    padding: 5px !important;
+    margin-bottom: -15px;
+}
+/* -ID- */
+#contenedorGaleria {
+    padding-top:50px;
+}
+#contenedorBarraBotonesFiltro {
+    background-color: rgba(116,204,188,.4) !important;
+    margin-top: 68px;
+}
+#contenedorBarraBotonesFiltro > .btn-group-justified {
+    /* Barra de botones del filtro en galeria*/
+    background-color: rgba(255,255,255,1);
+    margin: 9px 3px;
+    left: 5% !important;
+    width: 90% !important;
+    border-radius: 5px;
+
+}
+#logoPekesCabecera {
+    margin-top: 4px;
+    height: 67px;
+    padding: 8px;
+}
+#mapa{
+    margin-top:60px;
+    text-align:center;
+    width: 90%;
+    height:350px;
+}
+
+/*#btnFiltrar{
+     border-color: #e8507c;
+     background-color: white;
+     border-width:2px;
+     border-color: #e8507c;
+     border-radius: 4px;
+     color:#e8507c;
+     width:100%;
+     padding:10px;
+     margin-top:70px;
+
+}
+#btnFiltrar:hover, #btnFiltrar:active{
+      background-color: #e8507c;
+      border-color: white;
+      color:white;
+
+}*/
+#btnMenu {
+    background-color: #e8507c;
+}
+
+    #btnMenu > span {
+        background-color: white;
+    }
+
+    #btnMenu:hover {
+        border-color: #e8507c;
+        background-color: white;
+        border-color: #e8507c;
+    }
+
+        #btnMenu:hover span, #btnMenu:focus span {
+            background-color: #e8507c;
+        }
+
+#btn_InicioSesion {
+    display: inline-block;
+    float: right;
+    text-align: right;
+    visibility: visible;
+    background-color: #e8507c;
+    color: white;
+}
+
+    #btn_InicioSesion:hover, #btn_InicioSesion:hover {
+        background-color: white;
+        border-color: #e8507c;
+        color: #e8507c;
+    }
+
+#wrap {
+    height: 80%;
+    max-width:1024px;
+}
+#modalImagen{
+    padding-top:90px;
+}
+/***********************-MEDIA QUERIES: Modo escritorio**********/
+@media screen and (min-width: 767px) {
+    #PanelLoginMin {
+        display: none;
+    }
+
+    .navbar-right {
+        margin-right: -25px;
+    }
+
+    #btnFiltrar {
+        display: none;
+    }
+
+    .navbar-toggle {
+        margin-top: 20px !important;
+    }
+
+    .navbar-pekes {
+        padding-top: 0px;
+        padding-left: 0px;
+    }
+    /*.dropdown { display: none; }*/
+    #logoPekesCabecera {
+        background: url('../img/Pekes_Logo.png') center / no-repeat;
+    }
+
+    #PanelLogin, #btn_InicioSesion {
+        visibility: visible;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .imagenSlider {
+        height: 700px !important;
+    }
+}
+
+/***********************-MEDIA QUERIES: Modo movil**************/
+
+@media screen and (max-width: 767px) {
+    #contenedorGaleria{
+        padding-top:100px;
+    }
+    .footer{
+        width:auto;
+        height:auto;
+    }
+    #mapa{
+        margin:20px;
+        width: 80%;
+        height:300px;
+    }
+    #logoPekesCabecera {
+        transform: translateX(-50%);
+        left: 50%;
+        position: absolute;
+    }
+
+    #btn_InicioSesion {
+        visibility: hidden;
+        display: none;
+    }
+
+    .nav > li > a {
+        line-height: 25px !important;
+        font-size: large;
+        color: #337ab7;
+
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .sliderIndex > .item > img, .sliderIndex > .item > a > img {
+        max-height: 100% !important;
+        width: auto !important;
+        margin: auto !important;
+    }
+
+    .imagenSlider { /*Las imagenes*/
+        background-position: center !important;
+        background-image: none;
+        position: center;
+        height: 350px !important;
+        width: auto !important;
+        vertical-align: middle !important;
+        border: 0 !important;
+        -ms-interpolation-mode: bicubic !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .imagenSlider { /*Las imagenes*/
+        height: 250px !important;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #spanIniciarSesion {
+        display: none;
+    }
+}
+/***********************Tipografias*****************************/
+@font-face {
+    font-family: 'MyriadPro-Regular';
+    src: url('../fonts/MyriadPro-Regular.otf') format('opentype');
+}

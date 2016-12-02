@@ -1,0 +1,190 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title></title>
+    <!-- CSS  -->
+    <%--    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />--%>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="css/bootstrap-social.css" rel="stylesheet" />
+    <link href="css/Style.css" rel="stylesheet" />
+
+
+    <!-- JavaScripts  -->
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/jssha1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="scripts/responsive.js"></script>
+    <script src="scripts/login.js"></script>
+
+    <!-- ContentPlaceHolder  -->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <!-- Barra de navegacion  -->
+    <nav id="mainNav" class="navbar navbar-pekes navbar-fixed-top">
+        <div class="container">
+            <!-- Logo y Cabecera Dispositivos Moviles -->
+            <div class="navbar-header">
+                <!--Boton menu -->
+                <button id="btnMenu" type="button" class="navbar-toggle pull-left btn-pekes" data-toggle="collapse" data-target="#bs-navbar-collapse-1">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--Logo Pekes -->
+                <a class="navbar-brand" href="Index.aspx">
+                    <img src="img/logos/Pekes_Logo.png" id="logoPekesCabecera" />
+                </a>
+                <%-- Slider Logos comentado hasta corregir animacion de transicion y logo intuition --%>
+                <%--  <a  class="navbar-brand" href="Index.aspx">
+                    <div class="navbar-brand slide" data-ride="carousel">
+                     
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="img/logos/Pekes_Logo.png" alt="Imagen1" class="logoCabecera" />
+                            </div>
+                            <div class="item">
+                                <img src="img/logos/Picolin.png" alt="Imagen2" class="logoCabecera" />
+                            </div>
+                            <div class="item">
+                                <img src="img/logos/Women_Intuition_Lila.png" alt="Imagen3" class="logoCabecera" />
+                            </div>
+                        </div>
+                    </div>
+                </a>--%>
+                <!--Btn Iniciar Sesion MOVILES-->
+                <div class="dropdown navbar-right" id="PanelLoginMin">
+                    <button id="toggle_InicioSesion" type="button" class="navbar-toggle pull-right btn-pekes" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-user"></span>
+                    </button>
+                    <div class="dropdown-menu menuLogin" id="dropdown_Cabecera_Movil">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Acceda a su cuenta Pekes</h4>
+                            </div>
+                            <div class="panel-body">
+                                <form class="form-group" id="form-LoginMin">
+                                    <input type="text" class="form-control input-login" id="txtUsuarioMovil" placeholder="Nombre de Usuario" />
+                                    <input type="password" class="form-control input-login" id="txtContraseñaMovil" placeholder="Contraseña" />
+                                </form>
+                            </div>
+                            <div class="panel-footer menuLoginFooter">
+                                <button type="button" class="btn btn-pekes" data-dismiss="modal" onclick="Logearse()">Entrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
+                <!--Menu colapsable de el btn menu-->
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="list-group menuColapsado hidden-lg hidden-md hidden-sm">
+                        <a href="Nosotros.aspx" class="list-group-item"><i class="fa fa-users pull-left" aria-hidden="true"></i>&nbsp;¿Quienes Somos?</a>
+                        <a href="Galeria.aspx" class="list-group-item"><i class="fa fa-camera pull-left" aria-hidden="true"></i>&nbsp;Galería</a>
+                        <a href="Contacto.aspx" class="list-group-item"><i class="fa fa-comments pull-left" aria-hidden="true"></i>&nbsp;Contactanos</a>
+                        <a href="Pedidos.aspx" class="list-group-item linkPedidos"><i class="fa fa-pencil-square-o pull-left" aria-hidden="true"></i>&nbsp;Pedidos</a>
+                    </li>
+                    <li class="hidden-xs visible-sm visible-md visible-lg">
+                        <a href="Nosotros.aspx"><i class="fa fa-users" aria-hidden="true"></i>&nbsp;¿Quienes Somos?</a>
+                    </li>
+                    <li class="hidden-xs visible-sm visible-md visible-lg">
+                        <a href="Galeria.aspx"><i class="fa fa-camera" aria-hidden="true"></i>&nbsp;Galería</a>
+                    </li>
+                    <li class="hidden-xs visible-sm visible-md visible-lg">
+                        <a href="Contacto.aspx"><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;Contactanos</a>
+                    </li>
+                    <li class="hidden-xs visible-sm visible-md visible-lg linkPedidos" onload="Generica.MostrarLinkPedidos()">
+                        <a href="Pedidos.aspx"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;Pedidos</a>
+                    </li>
+                </ul>
+                <!--Boton Inicio sesion y Panel colapsable de el boton menu-->
+                <div class="dropdown navbar-right " id="PanelLogin">
+                    <button class="navbar-btn navbar-toggle" type="button" data-toggle="dropdown" id="btn_InicioSesion" aria-expanded="false" aria-controls="dr">
+                        <span class="glyphicon glyphicon-user"></span>&nbsp;<span id="spanIniciarSesion">Iniciar Sesión</span>
+                    </button>
+                    <div class="dropdown-menu menuLogin" id="dr">
+                        <div class="panel panel-collapse">
+                            <div class="panel-heading">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Acceda a su cuenta Pekes</h4>
+                            </div>
+                            <div class="panel-body">
+                                <form class="form-group" id="form-Login2">
+                                    <input type="text" class="form-control input-login" id="txtUsuarioEscritorio" placeholder="Nombre de Usuario" />
+                                    <input type="password" class="form-control input-login" id="txtContraseñaEscritorio" placeholder="Contraseña" />
+                                </form>
+                            </div>
+                            <div class="panel-footer menuLoginFooter">
+                                <button type="button" class="btn btn-pekes" data-dismiss="modal" onclick="Logearse()">Entrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--WRAP para paginas web aqui-->
+    <div id="wrap" class="container">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <section class="container-fluid">
+            <article class="row">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <!-- Aqui van las redes sociales y boton contacto -->
+                    <h4>Encuentranos en las Redes Sociales</h4>
+                    <br />
+                    <div class="hidden-xs visible-sm visible-md visible-lg">
+                        <a href="#" class="btn btn-social btn-twitter botonSocial"><span class="fa fa-twitter"></span>Twitter</a>
+                        <a href="#" class="btn btn-social btn-facebook botonSocial"><span class="fa fa-facebook"></span>Facebook</a>
+                        <a href="#" class="btn btn-social btn-info botonSocial"><span class="fa fa-envelope-o"></span>Escribenos</a>
+                    </div>
+                    <div class="visible-xs hidden-sm hidden-md hidden-lg">
+                        <a href="#" class="btn btn-social-icon btn-twitter botonSocial"><span class="fa fa-twitter"></span></a>
+                        <a href="#" class="btn btn-social-icon btn-facebook botonSocial"><span class="fa fa-facebook"></span></a>
+                        <a href="#" class="btn btn-social-icon btn-info botonSocial"><span class="fa fa-envelope-o"></span></a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <!-- Aqui van los logos -->
+                    <h4>Familia Pekes</h4>
+                    <section class="row">
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+<%--                            <img src="img/logos/Picolin_BlancoNegro.png" class="logoFooter" />--%>
+                        </div>
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                           <img src="img/logos/WomenBlancoNegro.png" class="logoFooter" />
+                        </div>
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+<%--                            <img src="img/logos/LogoPekesFooter.png" class="logoFooter" />--%>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <!-- Aqui va La info de ciudad direccion etc -->
+                    <h4>Visitanos</h4>
+                    <%--                <h5>León, Guanajuato México. Boulevard Algeciras 604, local 3. Arbide, León (Guanajuato), México.</h5>--%>
+                    <a href="#" class="btn btn-social btn-google botonSocial"><span class="fa fa-map"></span>¿Como llegar?</a>
+                </div>
+            </article>
+        </section>
+    </footer>
+</body>
+</html>
