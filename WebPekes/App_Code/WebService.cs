@@ -58,6 +58,7 @@ public class WebService : System.Web.Services.WebService
         //Logica de base de datos
         Cliente cliente = new Cliente();
         return cliente;
+        //HOLA MUNDO
     }
     [WebMethod]
     public EstadoRespuesta Acceso(string Nick, string Password)
@@ -179,5 +180,43 @@ public class WebService : System.Web.Services.WebService
                  estado = TiposEstado.Error,
              };*/
         }
+    }
+    [WebMethod]
+    public List<Venta> consultarVentas()
+    {
+        List<Venta> ventas = new List<Venta>();
+        ManejadorVenta mv = new ManejadorVenta();
+        ventas = mv.getAllVentas();
+        return ventas;
+    }
+    [WebMethod]
+    public List<Venta> consultarVentasPorCliente(Venta venta)
+    {
+        List<Venta> ventas = new List<Venta>();
+        ManejadorVenta mv = new ManejadorVenta();
+        ventas = mv.getAllVentas();
+        return ventas;
+    }
+    [WebMethod]
+    public List<Galeria> consultarGaleria()
+    {
+        List<Galeria> galerias = new List<Galeria>();
+        ManejadorGaleria mg = new ManejadorGaleria();
+        galerias = mg.getAllGalerias();
+        return galerias;
+    }
+    [WebMethod]
+    public void insertarGaleria(Galeria galeria)
+    {
+        ManejadorGaleria mg = new ManejadorGaleria();
+        mg.insertGaleria(galeria);
+
+    }
+    [WebMethod]
+    public void actualizarGaleria(Galeria galeria)
+    {
+        ManejadorGaleria mg = new ManejadorGaleria();
+        mg.updateGaleria(galeria);
+
     }
 }

@@ -11,3 +11,8 @@ C:\inetpub\wwwPekes\Integrador3.0\LibreriaWebPekes\LibreriaWebPekes\bin\Debug\Li
 C:\inetpub\wwwPekes\Integrador3.0\LibreriaWebPekes\LibreriaWebPekes\bin\Debug\LibreriaWebPekes.pdb
 C:\inetpub\wwwPekes\Integrador3.0\LibreriaWebPekes\LibreriaWebPekes\obj\Debug\LibreriaWebPekes.dll
 C:\inetpub\wwwPekes\Integrador3.0\LibreriaWebPekes\LibreriaWebPekes\obj\Debug\LibreriaWebPekes.pdb
+C:\inetpub\wwwPekes\LibreriaWebPekes\LibreriaWebPekes\bin\Debug\LibreriaWebPekes.dll
+C:\inetpub\wwwPekes\LibreriaWebPekes\LibreriaWebPekes\bin\Debug\LibreriaWebPekes.pdb
+C:\inetpub\wwwPekes\LibreriaWebPekes\LibreriaWebPekes\obj\Debug\LibreriaWebPekes.dll
+C:\inetpub\wwwPekes\LibreriaWebPekes\LibreriaWebPekes\obj\Debug\LibreriaWebPekes.pdb
+C:\inetpub\wwwPekes\LibreriaWebPekes\LibreriaWebPekes\obj\Debug\LibreriaWebPekes.csprojResolveAssemblyReference.cache

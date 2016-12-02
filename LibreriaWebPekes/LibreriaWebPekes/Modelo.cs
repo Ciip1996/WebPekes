@@ -9,51 +9,53 @@ namespace LibreriaWebPekes.Modelo
 {
     public class Persona
     {
-        public int Identificador { get; set; }
-        public string Nombre { get; set; }
-        public string ApellidoPaterno { get; set; }
-        public string ApellidoMaterno { get; set; }
-        public string Rfc { get; set; }
-        public string Curp { get; set; }
-        public string Domicilio { get; set; }
-        public string Ciudad { get; set; }
-        public string Email { get; set; }
-        public string TelMovil { get; set; }
-        public string Fotografía { get; set; }
-        public DateTime FechaNacimiento { get; set; }
+        public int identificador { get; set; }
+        public string nombre { get; set; }
+        public string apellidoPaterno { get; set; }
+        public string apellidoMaterno { get; set; }
+        public string rfc { get; set; }
+        public string curp { get; set; }
+        public string domicilio { get; set; }
+        public string ciudad { get; set; }
+        public string email { get; set; }
+        public string telMovil { get; set; }
+        public string fotografía { get; set; }
+        public DateTime fechaNacimiento { get; set; }
     }
     public class Cliente
     {
-        public int Identificador { get; set; }
-        public string NombreContacto { get; set; }
-        public string Categoria { get; set; }
-        public Persona Persona { get; set; }
+        public int identificador { get; set; }
+        public string folioCliente { get; set; }
+        public string nombreContacto { get; set; }
+        public string categoria { get; set; }
+        public Persona persona { get; set; }
     }
     public class Empleado
     {
-        public int Identificador { get; set; }
-        public DateTime FechaIngreso { get; set; }
-        public string Puesto { get; set; }
-        public DateTime FechaEgreso { get; set; }
-        public Persona Persona { get; set; }
+        public int identificador { get; set; }
+        public DateTime fechaIngreso { get; set; }
+        public string puesto { get; set; }
+        public DateTime fechaEgreso { get; set; }
+        public Persona persona { get; set; }
     }
     public class Venta
     {
-        public int Identificador { get; set; }
-        public double Subtotal { get; set; }
-        public double Descuento { get; set; }
-        public double Impuestos { get; set; }
-        public double Total { get; set; }
-        public bool Liquidado { get; set; }
+        public int identificador { get; set; }
+        public double subtotal { get; set; }
+        public double descuento { get; set; }
+        public double impuestos { get; set; }
+        public double total { get; set; }
+        public int liquidado { get; set; }
+        public Cliente cliente { get; set; }
     }
     public class Pedido
     {
-        public int Identificador { get; set; }
-        public int Folio { get; set; }
-        public DateTime FechaSolicitud { get; set; }
-        public DateTime FechaEntrega { get; set; }
-        public int Estado { get; set; }
-        public Venta Venta { get; set; }
+        public int identificador { get; set; }
+        public int folio { get; set; }
+        public DateTime fechaSolicitud { get; set; }
+        public DateTime fechaEntrega { get; set; }
+        public int estado { get; set; }
+        public Venta venta { get; set; }
 
     }
     public class Calzado
@@ -68,30 +70,30 @@ namespace LibreriaWebPekes.Modelo
     }
     public class Estilo
     {
-        public int Identificador { get; set; }
-        public string Material { get; set; }
-        public string Color { get; set; }
-        public string AtributoExtra { get; set; }
-        public bool Estatus { get; set; }
+        public int identificador { get; set; }
+        public string material { get; set; }
+        public string color { get; set; }
+        public string atributoExtra { get; set; }
+        public bool estatus { get; set; }
     }
     public class DetallesDePedido
     {
-        public int Identificador_Pedido { get; set; }
-        public int Identificador_Calzado { get; set; }
-        public int Identificador_Estilo { get; set; }
-        public string Suela { get; set; }
-        public string Descuento { get; set; }
-        public float Costo { get; set; }
-        public XmlDocument Corrida { get; set; }
+        public int identificador_Pedido { get; set; }
+        public int identificador_Calzado { get; set; }
+        public int identificador_Estilo { get; set; }
+        public string suela { get; set; }
+        public string descuento { get; set; }
+        public float costo { get; set; }
+        public XmlDocument corrida { get; set; }
     }
     public class Credencial
     {
-        public int Identificador { get; set; }
-        public string Nombre { get; set; }
-        public string Nick { get; set; }
-        public string Password { get; set; }
-        public bool Estatus { get; set; }
-        public int Identificador_Creador { get; set; }
+        public int identificador { get; set; }
+        public string nombre { get; set; }
+        public string nick { get; set; }
+        public string password { get; set; }
+        public bool estatus { get; set; }
+        public int identificador_Creador { get; set; }
     }
     public class Sesion
     {
@@ -102,5 +104,13 @@ namespace LibreriaWebPekes.Modelo
         public DateTime ultimaActividad { get; set; }
         public DateTime fechaFinal { get; set; }
         public bool estatus { get; set; }
+    }
+    public class Galeria
+    {
+        public int identificador { get; set; }
+        public String codigo { get; set; }
+        public String foto { get; set; }
+        public String descripcion { get; set; }
+        public int status { get; set; }
     }
 }
