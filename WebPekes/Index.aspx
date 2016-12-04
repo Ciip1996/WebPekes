@@ -18,7 +18,7 @@
                     <img src="img/index/Imagen1.jpg" alt="Imagen1" class="imagenSlider" />
                 </div>
                 <div class="item">
-                    <img src="img/index/Imagen2.jpg" alt="Imagen2" class="imagenSlider" />
+                    <img src="img/index/Imagen2.png" alt="Imagen2" class="imagenSlider" />
                 </div>
             </div>
             <!-- Left and right controls -->
@@ -49,8 +49,8 @@
 
             <div class="col-sm-4">
                 <div class="thumbnail">
-                    <a href="img/index/Imagen2.jpg">
-                        <img src="img/index/Imagen2.jpg" alt="Cinque Terre" style="height: 150px" />
+                    <a href="img/index/Imagen2.png">
+                        <img src="img/index/Imagen2.png" alt="Cinque Terre" style="height: 150px" />
                         <%--<div class="caption">
                         <p>The Cinque Terre: A rugged portion of coast in the Liguria region of Italy.</p>
                     </div>--%>

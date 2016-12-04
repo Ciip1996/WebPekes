@@ -16,7 +16,6 @@
         </nav>
         <nav class="visible-xs hidden-sm hidden-lg hidden-md navbar-fixed-top" id="contenedorBarraBotonesFiltro">
             <div class="btn-group btn-group-justified">
-
                  <div class="btn-group">
                      <a id="btnPekes" href="#btnPekes" class="btn btn-default btn-filtro toggleSwitch">Pekes</a>
                  </div>
@@ -45,10 +44,10 @@
                  </div>
              </div>
          </nav>
-
     </div>
     <section id="contenedorGaleria" class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
         <div class="row" id="galeria">
+
             <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2" >
                 <a class="thumbnail" href="#" >
                     <img class="img-responsive" src="http://placehold.it/400x300" alt=""/>

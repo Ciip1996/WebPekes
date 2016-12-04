@@ -30,6 +30,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
+    <div id="wrap">
     <!-- Barra de navegacion  -->
     <nav id="mainNav" class="navbar navbar-pekes navbar-fixed-top">
         <div class="container">
@@ -139,13 +140,13 @@
         </div>
     </nav>
     <!--WRAP para paginas web aqui-->
-    <div id="wrap" class="container">
+    <div id="main" class="container clear-top">
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
     </div>
     <!-- Footer -->
     <footer class="footer">
-        <section class="container-fluid">
+        <section class="container">
             <article class="row">
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                     <!-- Aqui van las redes sociales y boton contacto -->
@@ -186,5 +187,6 @@
             </article>
         </section>
     </footer>
+    </div>
 </body>
 </html>
